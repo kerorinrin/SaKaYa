@@ -89,6 +89,7 @@ header{
 .p1-wrap{
     display: flex;
     column-gap: 3vw;
+    margin-top: 12px;
 }
 
 .item1{
