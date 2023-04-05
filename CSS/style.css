@@ -83,14 +83,15 @@ header{
 
 .profile{
     width: 365px;
-    height: 571px;
+    height: 500px;
     border-radius: 16px;
+    overflow: hidden;
 }
 
 .p1-wrap{
     display: flex;
     column-gap: 3vw;
-    margin-top: 15px;
+/*     margin-top: 15px; */
 }
 
 .item1{
