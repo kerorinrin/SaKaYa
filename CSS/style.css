@@ -84,6 +84,7 @@ header{
 .profile{
     width: 365px;
     height: 571px;
+    border-radius: 16px;
 }
 
 .p1-wrap{
