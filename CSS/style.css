@@ -50,6 +50,8 @@ header{
     background-position: center top;
     margin: 0;
     background-repeat: no-repeat;
+    position:absolute;
+    top:-10px;
 }
 
 .inner-text{
@@ -68,6 +70,7 @@ header{
     flex-direction: column;
     font-size: 3rem;
     background-attachment: fixed;
+    position:relative;
 }
 
 #our-story{
