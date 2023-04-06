@@ -6,6 +6,7 @@ body{
     font-family:"Noto Sans TC", Roboto;
     line-height: 1.7;
     color: black;
+    margin:0;
 }
 a{
     text-decoration: none;
