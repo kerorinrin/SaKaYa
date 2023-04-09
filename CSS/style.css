@@ -1,136 +1,131 @@
-@charset "UTF-8";
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+    color: black;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    font-family:Roboto, "Noto Sans TC";
+	line-height: 1;
+}
+ol, ul, nav{
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 /* 共通部分 */
-html{font-size: 100%;}
-body{
-    font-family:"Noto Sans TC", Roboto;
-    line-height: 1.7;
-    color:rgba(0, 0, 0, 0.75) ;
-    margin:0;
-}
 a{
     text-decoration: none;
     color: black;
+    font-size: 1.5rem;
 }
 
 a:hover{
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
-img{max-width: 100%;}
-/* --------------------------------------------- */
+img{max-width: 100vw;}
 
-.main-nav{
-    display: flex;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    margin-top: 34px;
-    list-style: none;
-}
-
-.main-nav li{margin-right: 45px;}
 
 header{
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     column-gap: 36%;
     width: 100%;
-    margin: 0 auto;
+    padding-top: 3%;
 }
 
-#content{
+article{
+    min-height: 100vh;
+    min-width: 100%;
+    font-size: 3em;
+    line-height: 1.5;
+    word-spacing: 0.1em;
+}
+
+nav{
     display: flex;
+    text-transform: uppercase;
+    font-size: 0.5em;    
 }
 
+nav a{
+    margin: 0 0.5em;
+    color: #333;
+    padding: 8px;
+}
+
+nav a:hover{
+    background-color: orange;
+    border-radius: 16px;
+    opacity: 0.8;
+}
+
+/* index page */
 #big-bg{
     background-image: url(https://raw.githubusercontent.com/kerorinrin/SaKaYa/main/images/big-bg.jpg);
-    min-height: 100vh;
     background-size: cover;
-    background-position: center top;
-    margin: 0;
     background-repeat: no-repeat;
-    position:absolute;
-    top:-10px;
 }
+.big-bg-text{margin: 20% 0 0 10%;}
+.big-bg-text>div,p{color: #fff;}
+.big-bg-text>div{font-size: 2EM;}
 
-.inner-text{
-    margin-top: 20%;
-    margin-left: 10%;
-    color: aliceblue;
-}
-
-.slogan{
-    font-size: 78px;
-    font-weight: bold;
-}
-
-.wrap{
+#story{background-color: #FDE670;}
+.story-container{
+    width: 1400px;
+    margin: 0 auto;
+    padding: 5% 0;
     display: flex;
-    flex-direction: column;
-    font-size: 3rem;
-    background-attachment: fixed;
-    position:relative;
-}
-
-#our-story{
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    padding: 0 5% 5% 5%;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 32px;
     text-align: justify;
-    background-color: #FDE670;
-    height: 100vh;
 }
-
+.story-1{width: 1000px;}
 .profile{
-    width: 365px;
-    height: 571px;
     border-radius: 16px;
+    overflow: hidden;
 }
-
-.p1-wrap{
-    display: flex;
-    column-gap: 3vw;
-/*     margin-top: 15px; */
-}
-
-.item1{
-    width: 365px;
-    height: 571px;
-}
-
-.item2{
-    width: 900px;
-    display: inline-block;
-    flex-grow: 1;
-    align-self: flex-end;
-    padding-bottom: 0;
-    margin-bottom: 0;
-    vertical-align: bottom;
-}
-
 .title{
     color: orange;
-    font-size: 78px;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
-.product-index-wrap{
-    display: flex;
-    column-gap: 120px;
-    justify-content: center;
-    align-items: center;
-    font-size: 36px;
-    margin-bottom: 5%;
-}
-
-.item{
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-}
 
 #products{
     display: flex;
@@ -140,28 +135,46 @@ header{
     min-height: 100vh;
     background-color: #fff6de;
 }
-
 .title2{
     font-size: 72px;
     font-weight: bold;
-    margin: 10px auto;
+    margin: 2% auto;
+}
+.product-index-wrap{
+    display: flex;
+    column-gap: 120px;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    margin-bottom: 5%;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    text-align: center;
+    overflow: hidden;
+}
+.item:hover{
+    opacity: 0.5;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;   
 }
 
 .events-wrap{
     background-image: url(https://raw.githubusercontent.com/kerorinrin/SaKaYa/main/images/events2.jpg);
     min-height: 100vh;
-    background-size: contain;
+    background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
     color:white;
     font-weight: bold;
     text-align: center;
     padding-top: 20%;
-    font-size: 4.5rem;
+    font-size: 1.5em;
 }
-
 .btn{
-    font-size: 2rem;
+    font-size: 0.7em;
     line-height: 3;
     padding: 0 32px;
     font-weight: normal;
@@ -172,7 +185,6 @@ header{
     opacity: 0.6;
     vertical-align: middle;
 }
-
 .btn:hover{
     font-weight: normal;
     font-style: normal;
@@ -180,9 +192,15 @@ header{
     background-color:rgba(255, 255, 255, 0.5);
 }
 
+/* product page */
+
+
 .p-wrapper{
-    padding-left: 5%;
-    margin-left: 10%;
+    width: 1400px;
+    padding-top: 5%;
+    margin: 0 auto;
+    /* padding-left: 5%; */ 
+    /* margin-left: 10%; */
 }
 
 .p-title{
@@ -200,11 +218,10 @@ header{
 .img-effect{
     border-radius: 16px;
     text-align: center;
-}
+} 
 
 .grid-container1{
     /* border: 1px solid black; */
-    width: 80%;
     height: 650px;
     display: grid;
     grid-template: repeat(2, 1fr)/ repeat(5, 1fr);
@@ -230,7 +247,6 @@ header{
 
 .grid-container2{
     /* border: 1px solid black; */
-    width: 80%;
     height: 850px;
     display: grid;
     grid-template: repeat(2, 1fr)/ repeat(4, 1fr);
@@ -270,7 +286,6 @@ header{
 
 .grid-container3{
     /* border: 1px solid black; */
-    width: 80%;
     display: grid;
     grid-template: repeat(1, 1fr)/ repeat(5, 1fr);
     justify-items: center;
@@ -278,20 +293,22 @@ header{
     margin: 7% 0 10% 0;
 }
 
-.link{
-    font-size: 2rem;
-    font-weight: bold;
-    color: #585858;
-    margin: 0 5%;
-}
 
-.wrap-link{
+.wrap-link{   
     text-align: center;
-    padding-right: 18%;
     margin-bottom: 10%;
+    
+}
+.wrap-link a{
+    /* border: 1px solid black; */
+    display: inline-block;
+    width:20% ;
+    font-size: 2em;
+    font-weight: bold;
+    color: #747373;
 }
 
-#big-bg, #our-story, #products, #events{
+/* #big-bg, #story, #products, #events{
     position: sticky; 
-    top: 10px; 
-}
+    top: 10px;  
+}  */
