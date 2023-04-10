@@ -115,11 +115,13 @@ nav a:hover{
     justify-content: space-between;
     row-gap: 32px;
     text-align: justify;
+    align-items: flex-end;
 }
 .story-1{width: 1000px;}
 .profile{
     border-radius: 16px;
     overflow: hidden;
+    height: 496px;
 }
 .title{
     color: orange;
