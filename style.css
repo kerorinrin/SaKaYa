@@ -26,8 +26,7 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 body {
-    font-family: 'Noto Sans TC', sans-serif;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif, 'Sedgwick Ave Display', cursive;
 	line-height: 1;
 }
 ol, ul, nav{
@@ -45,79 +44,66 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
 
 /* 共通部分 */
+article{
+    min-height: 100vh;
+    min-width: 100%;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    word-spacing: 0.1rem;
+}
+
 a{
     text-decoration: none;
-    color: black;
-    font-size: 1.5rem;
 }
-
-a:hover{
-    /* font-weight: bold; */
-}
-
-img{max-width: 100vw;}
-
 
 header{
     display: flex;
     justify-content: space-around;
-    align-items: center;
     column-gap: 36%;
     width: 100%;
-    padding: 0.3% 0;
-    background: linear-gradient(to bottom, rgba(253, 192, 6, 0.9), rgba(253, 184, 19,0.9));
-    /* background: linear-gradient(to right, rgba(253, 200, 6, 0.7), yellow); */
-    /* background-color: yellow; */
+    line-height: 0.9;
+    background: linear-gradient(to bottom, rgba(253, 192, 6, 0.3), rgba(253, 184, 19,0.9));
+    /* position: sticky;
+    top: 0; */
 }
-
+header:hover{
+background: linear-gradient(to bottom, rgba(253, 192, 6, 1), rgba(253, 184, 19, 1));
+}
 header a{
     display: flex;
     align-items: center;
 }
-
-article{
-    min-height: 100vh;
-    min-width: 100%;
-    font-size: 3em;
-    line-height: 1.5;
-    word-spacing: 0.1em;
-}
-
 nav{
     display: flex;
+    column-gap: 2rem;
     text-transform: uppercase;
 }
-
-nav li{
-    display: inline-block;
-}
-
 nav a{
-    margin: 0 0.5em;
     color: #333;
-    padding: 10px;
-    font-size: 0.4em; 
+    padding: 0.7rem;
+    font-size: 1.2rem; 
     display: block;   
 }
-
 nav a:hover{
-    background-color: #f2f2f2;
-    border-radius: 16px;
-    opacity: 0.8;
-    transition: 0.3s;
+    font-weight: bold;
+    transition: 0.6s;
 }
 
 footer{
-    position: sticky;
-    background-color: #646060; 
+    /* position: sticky; */
+    background-color: #7e7a7a; 
     text-align: center; 
     padding: 1% 0;
     font-size: small;
     border-top: 2px solid #928d8d;  
     border-bottom: 2px solid #928d8d;  
-    
 }
 footer>div{
     color: #fff;
@@ -129,66 +115,89 @@ footer>div{
     background-size: cover;
     background-repeat: no-repeat;
 }
-.big-bg-text{margin: 20% 0 0 10%;}
-.big-bg-text>div,p{color: #fff;}
-.big-bg-text>div{font-size: 2EM;}
+.big-bg-text{
+    width: 70%;
+    margin: 20% auto;
+}
+.big-bg-text>div,p{
+    color: #fff;
+}
+.big-bg-text>div{
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 5rem;
+}
+.big-bg-text>p{
+    font-size: 2rem;
+}
 
-#story{background-color: #FDE670;}
+
+#story{
+    background-color: #FDE670;
+    padding: 1%;
+    /* height: 100vh; */
+}
 .story-container{
-    width: 1400px;
+    width: 90%;
     margin: 0 auto;
-    padding: 5% 0;
+    /* padding: 5% 0; */
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: space-between;
-    row-gap: 32px;
+    column-gap: 5%;
     text-align: justify;
     align-items: flex-end;
 }
-.story-1{width: 1000px;}
-.profile{
-    border-radius: 16px;
-    overflow: hidden;
-    height: 496px;
+.story-container>div{
+    color: #333;
 }
-.title{
+.story-container>div>span{
     color: orange;
-    font-size: 1.5em;
+    font-size: 4.5rem;
     font-weight: bold;
+    display: block;
+}
+.story-container img{
+    width: 20%;
+    border-radius: 10px;
+}
+#story> div:nth-last-child(1){
+    width: 90%;
+    margin: 2% auto;
 }
 
 
+#products span{
+    font-size: 4rem;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin-top: 3%;
+    /* line-height: 2.5; */
+}
 #products{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    text-align: center;
     min-height: 100vh;
     background-color: #fff6de;
-}
-.title2{
-    font-size: 72px;
-    font-weight: bold;
-    margin: 2% auto;
 }
 .product-index-wrap{
     display: flex;
     column-gap: 10%;
     justify-content: center;
     align-items: center;
-    font-size: 36px;
-    margin-bottom: 5%;
+    margin: 3% 0 3% 0;
 }
 .item{
+    width: 16%;
     display: flex;
     flex-direction: column;
     border-radius: 16px;
     text-align: center;
-    overflow: hidden;
+    font-size: 0.8em;
 }
-.item div{
-    font-size: 3rem;
-}
+.item img{border-radius: 16px;}
+
 .item:hover{
     opacity: 0.5;
     border: 2px solid rgba(0, 0, 0, 0.5);
@@ -197,7 +206,7 @@ footer>div{
 
 .events-wrap{
     background-image: url(https://raw.githubusercontent.com/kerorinrin/SaKaYa/main/images/events2.jpg);
-    min-height: 100vh;
+    min-height: 110vh;
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -209,9 +218,9 @@ footer>div{
     font-size: 1.5em;
 }
 .btn{
-    font-size: 0.7em;
+    font-size: 0.5em;
     line-height: 3;
-    padding: 0 32px;
+    padding: 16px 32px;
     font-weight: normal;
     border: 2px solid white;
     color: white;
@@ -227,18 +236,22 @@ footer>div{
     background-color:rgba(255, 255, 255, 0.5);
 }
 
-#big-bg, #story, #products, #events{
+/* #events{
     position: sticky; 
     top: 0;  
     height: 100vh; 
-} 
+}  */
 
+/* #big-bg, #story, #products, events{
+    position: sticky;
+    top: 0;
+} */
 
 /* product page */
 
 .p-wrapper{
     width: 1400px;
-    padding-top: 5%;
+    /* padding-top: 5%; */
     margin: 0 auto;
     /* padding-left: 5%; */ 
     /* margin-left: 10%; */
