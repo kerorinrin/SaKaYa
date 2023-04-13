@@ -12,7 +12,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
+    margin: 0;
 	padding: 0;
 	border: 0;
 	font: inherit;
@@ -23,7 +23,7 @@ time, mark, audio, video {
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 body {
     font-family: 'Noto Sans TC', sans-serif;
@@ -31,14 +31,14 @@ body {
 	line-height: 1;
 }
 ol, ul, nav{
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
+    content: '';
 	content: none;
 }
 table {
@@ -66,7 +66,15 @@ header{
     align-items: center;
     column-gap: 36%;
     width: 100%;
-    padding-top: 3%;
+    padding: 0.3% 0;
+    background: linear-gradient(to bottom, rgba(253, 192, 6, 0.9), rgba(253, 184, 19,0.9));
+    /* background: linear-gradient(to right, rgba(253, 200, 6, 0.7), yellow); */
+    /* background-color: yellow; */
+}
+
+header a{
+    display: flex;
+    align-items: center;
 }
 
 article{
@@ -80,19 +88,39 @@ article{
 nav{
     display: flex;
     text-transform: uppercase;
-    font-size: 0.5em;    
+}
+
+nav li{
+    display: inline-block;
 }
 
 nav a{
     margin: 0 0.5em;
     color: #333;
-    padding: 8px;
+    padding: 10px;
+    font-size: 0.4em; 
+    display: block;   
 }
 
 nav a:hover{
-    background-color: orange;
+    background-color: #f2f2f2;
     border-radius: 16px;
     opacity: 0.8;
+    transition: 0.3s;
+}
+
+footer{
+    position: sticky;
+    background-color: #646060; 
+    text-align: center; 
+    padding: 1% 0;
+    font-size: small;
+    border-top: 2px solid #928d8d;  
+    border-bottom: 2px solid #928d8d;  
+    
+}
+footer>div{
+    color: #fff;
 }
 
 /* index page */
@@ -176,7 +204,8 @@ nav a:hover{
     color:white;
     font-weight: bold;
     text-align: center;
-    padding-top: 20%;
+    padding-top: 15%;
+    line-height: 2;
     font-size: 1.5em;
 }
 .btn{
@@ -198,8 +227,14 @@ nav a:hover{
     background-color:rgba(255, 255, 255, 0.5);
 }
 
-/* product page */
+#big-bg, #story, #products, #events{
+    position: sticky; 
+    top: 0;  
+    height: 100vh; 
+} 
 
+
+/* product page */
 
 .p-wrapper{
     width: 1400px;
@@ -314,8 +349,3 @@ nav a:hover{
     color: #747373;
 }
 
-#big-bg, #story, #products, #events{
-    position: sticky; 
-    top: 0;  
-    height: 100vh; 
-} 
