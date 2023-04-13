@@ -314,7 +314,8 @@ nav a:hover{
     color: #747373;
 }
 
-/* #big-bg, #story, #products, #events{
+#big-bg, #story, #products, #events{
     position: sticky; 
-    top: 10px;  
-}  */
+    top: 0;  
+    height: 100vh; 
+} 
